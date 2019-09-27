@@ -1,3 +1,3 @@
 # Jaguaribe Food
 
-Projeto RAILS API com React
+Projeto RAILS API SPA
