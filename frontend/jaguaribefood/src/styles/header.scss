@@ -1,0 +1,12 @@
+@import "./minhascores";
+
+nav.navbar {
+  height: 70px;
+  border-bottom: 1px solid $my-gray;
+
+  .navbar-brand {
+    img {
+      height: 69px;
+    }
+  }
+}
