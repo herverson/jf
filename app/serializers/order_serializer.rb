@@ -1,3 +1,3 @@
 class OrderSerializer < ActiveModel::Serializer
-  attributes :id, :restaurant_id, :valor_total, :status
+  attributes :id, :restaurant_id, :total_value, :status
 end

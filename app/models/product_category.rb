@@ -3,5 +3,5 @@ class ProductCategory < ApplicationRecord
   has_many :products
 
   validates_associated :restaurant
-  validates :titulo, presence: true
+  validates :title, presence: true
 end

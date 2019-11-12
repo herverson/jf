@@ -1,16 +1,18 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: db
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: postgres
   username: postgres
-  password:
-  pool: 5
 
 development:
   <<: *default
-  database: jaguaribefood_development
-
+  database: one_bit_food_development
 
 test:
   <<: *default
-  database: jaguaribefood_test
+  database: one_bit_food_test
+
+production:
+  <<: *default
+  database: one_bit_food_production

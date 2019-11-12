@@ -1,15 +1,26 @@
-version: '3'
+version: '3.5'
+
 services:
-  db:
-    image: postgres
+  postgres:
+    image: "postgres:12.0"
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-  web:
+      - postgres:/var/lib/postgresql/data
+  
+  api:
+    depends_on:
+      - "postgres"
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    volumes:
-      - .:/jaguaribefood
+    command: bash start.sh
     ports:
       - "3000:3000"
-    depends_on:
-      - db
+    volumes:
+      - .:/jaguaribefood
+      - app-gems:/app-gems
+    stdin_open: true
+    tty: true
+
+volumes:
+  redis:
+  postgres:
+  app-gems:
+  elastic:

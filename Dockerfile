@@ -1,17 +1,18 @@
 FROM ruby:2.6.3
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-RUN mkdir /jaguaribefood
-WORKDIR /jaguaribefood
-COPY Gemfile /jaguaribefood/Gemfile
-COPY Gemfile.lock /jaguaribefood/Gemfile.lock
-RUN bundle install
-COPY . /jaguaribefood
 
-# Add a script to be executed every time the container starts.
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 3000
 
-# Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+  build-essential nodejs libpq-dev imagemagick git-all
+
+
+ENV INSTALL_PATH /jaguaribefood
+
+RUN mkdir -p $INSTALL_PATH
+
+WORKDIR $INSTALL_PATH
+
+COPY Gemfile ./
+
+ENV BUNDLE_PATH /app-gems
+
+COPY . .

@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: :show
+  before_action :find_rest, only: [:show]
   def index
-    @restaurants = Restaurant.near(params[:cidade] || 'Ceará')
+    @restaurants = Restaurant.near(params[:city] || 'São Paulo')
     filter_by_category if params[:category]
     render json: @restaurants
   end
@@ -14,19 +14,19 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.search(
       name_or_description_cont: params[:q]
     ).result
-    @restaurants = @restaurants.near(params[:cidade]) if params[:cidade]
-    render json: @restaurants
+   @restaurants = @restaurants.near(params[:city]) if params[:city]
+   render json: @restaurants
   end
 
   private
-    def set_restaurant
+    def find_rest
       @restaurant = Restaurant.find_by(id: params[:id])
     end
+    
 
     def filter_by_category
       @restaurants = @restaurants.select do |r|
-        r.category.titulo == params[:category]
+        r.category.title == params[:category]
       end
     end
-
 end

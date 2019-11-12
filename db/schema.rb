@@ -2,15 +2,15 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_22_001426) do
+ActiveRecord::Schema.define(version: 2019_11_06_170852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,78 +37,78 @@ ActiveRecord::Schema.define(version: 2019_07_22_001426) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "titulo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "order_products", force: :cascade do |t|
-    t.integer "quantidade"
-    t.text "comentario"
-    t.bigint "order_id"
-    t.bigint "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "quantity"
+    t.text "comment"
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_order_products_on_order_id"
     t.index ["product_id"], name: "index_order_products_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "nome"
-    t.string "numero_telefone"
-    t.float "valor_total"
-    t.string "endereco"
+    t.string "name"
+    t.string "phone_number"
+    t.float "total_value"
+    t.string "address"
     t.integer "status", default: 0
-    t.bigint "restaurant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 
   create_table "product_categories", force: :cascade do |t|
-    t.string "titulo"
-    t.bigint "restaurant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "title"
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurant_id"], name: "index_product_categories_on_restaurant_id"
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "nome"
-    t.text "descricao"
-    t.float "preco"
-    t.bigint "product_category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.bigint "product_category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "nome"
-    t.text "descricao"
+    t.string "name"
+    t.text "description"
     t.integer "status"
     t.float "delivery_tax"
-    t.string "estado"
-    t.string "cidade"
-    t.string "rua"
-    t.string "bairro"
-    t.string "numero"
-    t.string "complemento"
-    t.string "referencia"
+    t.string "state"
+    t.string "city"
+    t.string "street"
+    t.string "neighborhood"
+    t.string "number"
+    t.string "complement"
+    t.string "reference"
     t.string "cep"
     t.float "latitude"
     t.float "longitude"
-    t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_restaurants_on_category_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "valor"
-    t.bigint "restaurant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "value"
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
 

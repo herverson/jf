@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "cafcd43e-c499-4f59-b66d-55d712f47c69",
+		"name": "OnebitfoodApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorias#index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Categorias#index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cb513ab05c1a0bc1606baaaeed0478a7\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "03728a9c-43c8-4988-8c2b-2ebba841711a"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.100701"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"categories\": [\n        {\n            \"id\": 2,\n            \"title\": \"italiana\",\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--32329252bb31d7cb5ee06c567b9a3dc6d10f044b/italian.jpeg\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"japonesa\",\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1c43ab22bcd1000591855734a32e791740d39639/japonese.jpeg\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"mexicana\",\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0c6388e92d43abcb2f54281373fdb2f95f00d25d/mexican.jpg\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"vegana\",\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cefcd10e41a55bdc55000ce5c302c4a851cb20a9/vegan.jpeg\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"vegana\",\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f9de58e3db3135dc8f8dde58c8845d6d01c90e3f/peruana.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Restaurantes#index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/restaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants"
+					]
+				},
+				"description": "Exibe uma lista de restaurantes tendo como base a cidade de São Paulo"
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurantes#show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/restaurants/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Restaurantes#show",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/restaurants/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b711289cec261ee65118fef9273f4531\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "613b2997-2f66-4517-88a1-3dc141a6d3fb"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.130664"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurant\": {\n        \"id\": 1,\n        \"name\": \"Red Gastropub\",\n        \"description\": \"Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.\",\n        \"review\": \"5.0\",\n        \"status\": \"open\",\n        \"delivery_tax\": 5.5,\n        \"state\": \"SP\",\n        \"city\": \"São Paulo\",\n        \"street\": \"Melo Barreto\",\n        \"neighborhood\": \"Brás\",\n        \"number\": \"1393\",\n        \"complement\": null,\n        \"reference\": null,\n        \"cep\": null,\n        \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c6fa23845701d9a385c051cd1cea7f77b14a6b6f/red_gastropub.jpg\",\n        \"product_categories\": [\n            {\n                \"id\": 1,\n                \"title\": \"Massas\",\n                \"products\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Mole Poblano\",\n                        \"description\": \"É um tipo de molho mexicano criado com chocolate e pimenta, sendo muito consumido pelos mexicanos em eventos como casamento e festas de aniversário. Pode ser feito com frango.\",\n                        \"price\": 25,\n                        \"image_url\": null\n                    }\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Restaurantes#search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/restaurants/search/?q=Bravo&place=São Paulo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Bravo",
+							"description": "Restaurante que você está buscando"
+						},
+						{
+							"key": "place",
+							"value": "São Paulo",
+							"description": "Local onde está buscando"
+						}
+					]
+				},
+				"description": "Realiza pesquisa por restaurantes"
+			},
+			"response": [
+				{
+					"name": "Restaurantes#index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/restaurants/search/?q=Red&place =São Paulo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Red"
+								},
+								{
+									"key": "place ",
+									"value": "São Paulo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f633e4310d25fb79428af393f3113f15\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "d66aa218-bccf-4ad3-aa7b-aca0c5c145d8"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "1.344966"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurants\": [\n        {\n            \"id\": 1,\n            \"name\": \"Red Gastropub\",\n            \"description\": \"Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.\",\n            \"review\": \"5.0\",\n            \"status\": \"open\",\n            \"delivery_tax\": 5.5,\n            \"state\": \"SP\",\n            \"city\": \"São Paulo\",\n            \"street\": \"Melo Barreto\",\n            \"neighborhood\": \"Brás\",\n            \"number\": \"1393\",\n            \"complement\": null,\n            \"reference\": null,\n            \"cep\": null,\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c6fa23845701d9a385c051cd1cea7f77b14a6b6f/red_gastropub.jpg\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Restaurantes#index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/restaurants",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f633e4310d25fb79428af393f3113f15\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "db22bb59-12de-4e4d-ad19-0e9b55894ba8"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "1.353740"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurants\": [\n        {\n            \"id\": 1,\n            \"name\": \"Red Gastropub\",\n            \"description\": \"Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.\",\n            \"review\": \"5.0\",\n            \"status\": \"open\",\n            \"delivery_tax\": 5.5,\n            \"state\": \"SP\",\n            \"city\": \"São Paulo\",\n            \"street\": \"Melo Barreto\",\n            \"neighborhood\": \"Brás\",\n            \"number\": \"1393\",\n            \"complement\": null,\n            \"reference\": null,\n            \"cep\": null,\n            \"image_url\": \"http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c6fa23845701d9a385c051cd1cea7f77b14a6b6f/red_gastropub.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Order#Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \t\"order\": {\n      \t\t\"restaurant_id\": 1,\n      \t\t\"name\": \"josé\",\n      \t\t\"phone_number\": \"19 99999 9999\",\n      \t\t\"address\": \"Rua Abc, 987, São Paulo\",\n      \t\t\"order_products_attributes\": [\n      \t\t\t{\n      \t\t\t\t\"product_id\": 1,\n      \t\t\t\t\"quantity\": 2,\n      \t\t\t\t\"comment\": \"tirar y\"\n      \t\t\t},\n      \t\t\t{\n      \t\t\t\t\"product_id\": 1,\n      \t\t\t\t\"quantity\": 6,\n      \t\t\t\t\"comment\": \"tirar y\"\n      \t\t\t}\n      \t\t]\n      \t}\n      }"
+				},
+				"url": {
+					"raw": "localhost:3000/orders?",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "place",
+							"value": "São Paulo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Order#Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \t\"order\": {\n      \t\t\"restaurant_id\": 1,\n      \t\t\"name\": \"josé\",\n      \t\t\"phone_number\": \"19 99999 9999\",\n      \t\t\"address\": \"Rua Abc, 987, São Paulo\",\n      \t\t\"order_products_attributes\": [\n      \t\t\t{\n      \t\t\t\t\"product_id\": 1,\n      \t\t\t\t\"quantity\": 2,\n      \t\t\t\t\"comment\": \"tirar y\"\n      \t\t\t},\n      \t\t\t{\n      \t\t\t\t\"product_id\": 1,\n      \t\t\t\t\"quantity\": 6,\n      \t\t\t\t\"comment\": \"tirar y\"\n      \t\t\t}\n      \t\t]\n      \t}\n      }"
+						},
+						"url": {
+							"raw": "localhost:3000/orders?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "place",
+									"value": "São Paulo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74234e98afe7498fb5daf1f36ac2d78a\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8234d6a5-d483-4842-9546-70ecf2f39f4c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "2.529304"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "null"
+				}
+			]
+		},
+		{
+			"name": "Orders#show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/orders/:id?",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						":id"
+					],
+					"query": [
+						{
+							"key": "place",
+							"value": "São Paulo",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Orders#show",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders/6?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"6"
+							],
+							"query": [
+								{
+									"key": "place",
+									"value": "São Paulo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c6027eb51a341a2d9fe2b9688b2343d\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "7f89e6a7-f4cf-40f6-a132-bb04d4fd2fac"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.015335"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order\": {\n        \"id\": 6,\n        \"restaurant_id\": 1,\n        \"total_value\": 207.2,\n        \"status\": \"waiting\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d46948a7-b74c-43df-918f-a97b3d4fdea8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7e53cb69-1133-4688-a09b-7935a17290d9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

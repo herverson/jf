@@ -2,24 +2,24 @@ class Order < ApplicationRecord
   belongs_to :restaurant
   has_many :order_products
 
-  validates :nome, presence: true
-  validates :numero_telefone, presence: true
-  validates :valor_total, presence: true
+  validates :name, presence: true
+  validates :phone_number, presence: true
+  validates :total_value, presence: true
 
-  enum status: { waiting: 0, delivery: 1 }
+  enum status: %i[ waiting delivered ]
 
   accepts_nested_attributes_for :order_products, allow_destroy: true
 
-  before_validation :set_preco
-
+  before_validation :set_price
+   
   private
-    def set_preco
-      @final_preco = 0
+    def set_price
+      @final_price = 0
       order_products.each do |order_product|
-        produto = Product.find order_product.product_id
-        @final_preco += order_product.quantidade * product.preco
+        product = Product.find order_product.product_id
+        @final_price += order_product.quantity * product.price
       end
-
-      self.valor_total = @final_preco
+      
+      self.total_value = @final_price
     end
 end
