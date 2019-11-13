@@ -13,7 +13,7 @@
           </div>
           <div class="row">
             <div class="card grid" v-for="categorie of categories" :key="categorie.id">
-              <img class="card-img-top lista-card" v-bind:src="categorie.image_url" alt="">
+              <img class="card-img-top lista-card minhaimg" v-bind:src="categorie.image_url" alt="">
               <div class="card-body ">
                 <h4 class="card-title">{{categorie.title}}</h4>
               </div>
@@ -140,7 +140,7 @@
   .card {
     text-align: center;
   }
-  .card img {
+  .minhaimg {
 
     width: 195px;
     height: 180px;

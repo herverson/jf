@@ -1,6 +1,6 @@
 <template>
-    <b-navbar toggleable="md fixed-top" type="dark" variant="danger" >
-        <b-navbar-brand href="#"><img src="../images/teste/logo.png" width="250" height="50" alt="">  </b-navbar-brand>
+    <b-navbar toggleable="md" type="dark" variant="info" >
+        <b-navbar-brand href="#"><img src="../images/teste/logo.png" width="200" height="40" alt="">  </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
