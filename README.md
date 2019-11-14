@@ -2,7 +2,7 @@
 
 ## Projeto RAILS API com VueJS
 
-## Comandos para criar a imagem no Docker
+## Start project
 ``` 
 sudo docker-compose build
 sudo docker-compose up
