@@ -2,6 +2,8 @@
 
 ## Projeto RAILS API com VueJS
 
+## Documentação da API
+Está no arquivo ```documentacaojaguaribefood.json```
 ## Start project
 ``` 
 sudo docker-compose build
